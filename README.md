@@ -248,3 +248,6 @@ git add .
 git commit -m "Add native Android Mushaf Wird app"
 git branch -M main
 git push -u origin main
+awk 'p{print} /^set -e$/{p=1; print} /^git push -u origin main$/{exit}' README.md > /tmp/run.sh
+bash /tmp/run.sh
+
